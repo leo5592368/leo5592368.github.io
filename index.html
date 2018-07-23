@@ -311,6 +311,173 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://leo5592368.github.io/2018/07/23/拷贝Docker镜像/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="leo5592368">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Leo's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/23/拷贝Docker镜像/" itemprop="url">
+                  拷贝Docker镜像
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-23 22:17:59 / 修改时间：22:48:56" itemprop="dateCreated datePublished" datetime="2018-07-23T22:17:59+08:00">2018-07-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Docker-Docker技巧/" itemprop="url" rel="index"><span itemprop="name">Docker,Docker技巧</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="什么时候需要拷贝镜像？"><a href="#什么时候需要拷贝镜像？" class="headerlink" title="什么时候需要拷贝镜像？"></a>什么时候需要拷贝镜像？</h4><p>例如，内部网络无法通过互联网下载镜像，可以在已经安装的机器上将镜像拷贝到内部环境进行安装。</p>
+<h4 id="拷贝镜像的步骤（以Ubuntu系统为例）"><a href="#拷贝镜像的步骤（以Ubuntu系统为例）" class="headerlink" title="拷贝镜像的步骤（以Ubuntu系统为例）"></a>拷贝镜像的步骤（以Ubuntu系统为例）</h4><ul>
+<li>在源机器上保存镜像到当前目录<br><br>sudo docker save -o ./mysql.tar mysql:5.7</li>
+<li>拷贝tar包到需要装载镜像的机器<br></li>
+<li>执行load命令<br><br>sudo docker load &lt; mysql.tar</li>
+<li>检查镜像是否已装载<br><br>sudo docker images</li>
+<li>运行镜像<br><br>sudo docker run -p 3306:3306 -v $PWD/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password –name mysql57 -d mysql:5.7</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+<div>
+
+</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://leo5592368.github.io/2018/07/22/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -485,14 +652,40 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
               
             </nav>
           
