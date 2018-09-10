@@ -311,6 +311,169 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://leo5592368.github.io/2018/09/10/Docker常用命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="leo5592368">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Leo's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/10/Docker常用命令/" itemprop="url">
+                  Docker常用命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-10 22:34:53 / 修改时间：23:03:02" itemprop="dateCreated datePublished" datetime="2018-09-10T22:34:53+08:00">2018-09-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Docker常用命令详解"><a href="#Docker常用命令详解" class="headerlink" title="Docker常用命令详解"></a>Docker常用命令详解</h2><h3 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h3><p>docker pull [选项] [Docker Registry地址]&lt;仓库名&gt;:&lt;标签&gt;<br></p>
+<ul>
+<li><p>Docker Registry地址<br><br>格式：&lt;域名/ip&gt;[:端口号]<br><br>默认为DockerHub地址</p>
+</li>
+<li><p>仓库名<br><br>两段式名称，&lt;用户名&gt;/&lt;软件名&gt;<br><br>若不给出用户名，默认为library，即为官方镜像</p>
+</li>
+<li><p>镜像分层<br><br>镜像是进行分层存储的，下载的是也是一层层下载的，而不是单一文件。<br><br>下载时，会给出每一层ID的前12位。下载结束后，给出镜像完整的sha256的摘要，确保下载的一致性。</p>
+</li>
+</ul>
+<h3 id="运行镜像"><a href="#运行镜像" class="headerlink" title="运行镜像"></a>运行镜像</h3><p>docker run [选项] &lt;仓库名&gt;:&lt;标签&gt;</p>
+<ul>
+<li>示例<br>docker run -it –rm ununtu:14.04 bash<br><br>-i 交互式操作<br><br>-t 终端<br><br>–rm 容器退出后将其删除 <br><br>bash 使用容器的bash执行交互式shell命令</li>
+</ul>
+<h3 id="列出所有镜像"><a href="#列出所有镜像" class="headerlink" title="列出所有镜像"></a>列出所有镜像</h3><p>docker images</p>
+<ul>
+<li><p>列出的信息<br>仓库名 <br><br>标签：一个镜像可以对应多个标签 <br><br>镜像ID：镜像的唯一标识 <br><br>创建时间 <br><br>所占用空间：镜像下载到本地之后，展开后各层所占空间的总和。 <br></p>
+</li>
+<li><p>根据仓库名列出镜像<br>  docker images &lt;仓库名&gt;</p>
+</li>
+<li>列出指定镜像<br>  docker images &lt;仓库名&gt;:&lt;标签&gt;</li>
+<li>过滤参数<br>  如：docker images -f since=mongo:3.2，即列出mongo:3.2之后建立的镜像</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+<div>
+
+</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://leo5592368.github.io/2018/09/09/Docker基本概念/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -464,7 +627,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://leo5592368.github.io/2018/09/09/CentOS7-安装docker及docker常用命令/">
+    <link itemprop="mainEntityOfPage" href="https://leo5592368.github.io/2018/09/09/CentOS7-安装docker/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="leo5592368">
@@ -483,8 +646,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/09/CentOS7-安装docker及docker常用命令/" itemprop="url">
-                  CentOS7 安装docker及docker常用命令
+                <a class="post-title-link" href="/2018/09/09/CentOS7-安装docker/" itemprop="url">
+                  CentOS7 安装docker
                 </a>
               
             
@@ -510,12 +673,24 @@
                 
               
 
-              <time title="创建时间：2018-09-09 22:26:28 / 修改时间：23:32:31" itemprop="dateCreated datePublished" datetime="2018-09-09T22:26:28+08:00">2018-09-09</time>
+              <time title="创建时间：2018-09-09 22:26:28" itemprop="dateCreated datePublished" datetime="2018-09-09T22:26:28+08:00">2018-09-09</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-10 23:13:04" itemprop="dateModified" datetime="2018-09-10T23:13:04+08:00">2018-09-10</time>
               
             
           </span>
@@ -561,7 +736,7 @@
 </li>
 </ul>
 <h3 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h3><ul>
-<li><p>执行安装命令<br><br>sudo yum install docker</p>
+<li><p>执行安装命令<br><br>sudo yum -y install docker</p>
 </li>
 <li><p>启动docker服务<br><br>sudo service docker start</p>
 </li>
@@ -1177,7 +1352,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

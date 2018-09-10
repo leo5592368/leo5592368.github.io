@@ -108,25 +108,24 @@
 
 
 
-  <meta name="description" content="什么时候需要拷贝镜像？例如，内部网络无法通过互联网下载镜像，可以在已经安装的机器上将镜像拷贝到内部环境进行安装。 拷贝镜像的步骤（以Ubuntu系统为例） 在源机器上保存镜像到当前目录sudo docker save -o ./mysql.tar mysql:5.7 拷贝tar包到需要装载镜像的机器 执行load命令sudo docker load &amp;lt; mysql.tar 检查镜像是否已装载">
-<meta name="keywords" content="Docker">
+  <meta name="description" content="Docker常用命令详解获取镜像docker pull [选项] [Docker Registry地址]&amp;lt;仓库名&amp;gt;:&amp;lt;标签&amp;gt;  Docker Registry地址格式：&amp;lt;域名/ip&amp;gt;[:端口号]默认为DockerHub地址  仓库名两段式名称，&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;若不给出用户名，默认为library，即为官方镜像  镜像分层镜像是进行分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="拷贝Docker镜像">
-<meta property="og:url" content="https://leo5592368.github.io/2018/07/23/拷贝Docker镜像/index.html">
+<meta property="og:title" content="Docker常用命令">
+<meta property="og:url" content="https://leo5592368.github.io/2018/09/10/Docker常用命令/index.html">
 <meta property="og:site_name" content="Leo&#39;s Blog">
-<meta property="og:description" content="什么时候需要拷贝镜像？例如，内部网络无法通过互联网下载镜像，可以在已经安装的机器上将镜像拷贝到内部环境进行安装。 拷贝镜像的步骤（以Ubuntu系统为例） 在源机器上保存镜像到当前目录sudo docker save -o ./mysql.tar mysql:5.7 拷贝tar包到需要装载镜像的机器 执行load命令sudo docker load &amp;lt; mysql.tar 检查镜像是否已装载">
+<meta property="og:description" content="Docker常用命令详解获取镜像docker pull [选项] [Docker Registry地址]&amp;lt;仓库名&amp;gt;:&amp;lt;标签&amp;gt;  Docker Registry地址格式：&amp;lt;域名/ip&amp;gt;[:端口号]默认为DockerHub地址  仓库名两段式名称，&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;若不给出用户名，默认为library，即为官方镜像  镜像分层镜像是进行分">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-23T14:57:34.340Z">
+<meta property="og:updated_time" content="2018-09-10T15:03:02.474Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="拷贝Docker镜像">
-<meta name="twitter:description" content="什么时候需要拷贝镜像？例如，内部网络无法通过互联网下载镜像，可以在已经安装的机器上将镜像拷贝到内部环境进行安装。 拷贝镜像的步骤（以Ubuntu系统为例） 在源机器上保存镜像到当前目录sudo docker save -o ./mysql.tar mysql:5.7 拷贝tar包到需要装载镜像的机器 执行load命令sudo docker load &amp;lt; mysql.tar 检查镜像是否已装载">
+<meta name="twitter:title" content="Docker常用命令">
+<meta name="twitter:description" content="Docker常用命令详解获取镜像docker pull [选项] [Docker Registry地址]&amp;lt;仓库名&amp;gt;:&amp;lt;标签&amp;gt;  Docker Registry地址格式：&amp;lt;域名/ip&amp;gt;[:端口号]默认为DockerHub地址  仓库名两段式名称，&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;若不给出用户名，默认为library，即为官方镜像  镜像分层镜像是进行分">
 
 
 
 
 
 
-  <link rel="canonical" href="https://leo5592368.github.io/2018/07/23/拷贝Docker镜像/"/>
+  <link rel="canonical" href="https://leo5592368.github.io/2018/09/10/Docker常用命令/"/>
 
 
 
@@ -136,7 +135,7 @@
   };
 </script>
 
-  <title>拷贝Docker镜像 | Leo's Blog</title>
+  <title>Docker常用命令 | Leo's Blog</title>
   
 
 
@@ -315,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://leo5592368.github.io/2018/07/23/拷贝Docker镜像/">
+    <link itemprop="mainEntityOfPage" href="https://leo5592368.github.io/2018/09/10/Docker常用命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="leo5592368">
@@ -332,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">拷贝Docker镜像
+          <h1 class="post-title" itemprop="name headline">Docker常用命令
               
             
           </h1>
@@ -357,7 +356,7 @@
                 
               
 
-              <time title="创建时间：2018-07-23 22:17:59 / 修改时间：22:57:34" itemprop="dateCreated datePublished" datetime="2018-07-23T22:17:59+08:00">2018-07-23</time>
+              <time title="创建时间：2018-09-10 22:34:53 / 修改时间：23:03:02" itemprop="dateCreated datePublished" datetime="2018-09-10T22:34:53+08:00">2018-09-10</time>
             
 
             
@@ -367,31 +366,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Docker/" itemprop="url" rel="index"><span itemprop="name">Docker</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Docker/Docker技巧/" itemprop="url" rel="index"><span itemprop="name">Docker技巧</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -420,13 +394,27 @@
       
 
       
-        <h4 id="什么时候需要拷贝镜像？"><a href="#什么时候需要拷贝镜像？" class="headerlink" title="什么时候需要拷贝镜像？"></a>什么时候需要拷贝镜像？</h4><p>例如，内部网络无法通过互联网下载镜像，可以在已经安装的机器上将镜像拷贝到内部环境进行安装。</p>
-<h4 id="拷贝镜像的步骤（以Ubuntu系统为例）"><a href="#拷贝镜像的步骤（以Ubuntu系统为例）" class="headerlink" title="拷贝镜像的步骤（以Ubuntu系统为例）"></a>拷贝镜像的步骤（以Ubuntu系统为例）</h4><ul>
-<li>在源机器上保存镜像到当前目录<br><br>sudo docker save -o ./mysql.tar mysql:5.7</li>
-<li>拷贝tar包到需要装载镜像的机器<br></li>
-<li>执行load命令<br><br>sudo docker load &lt; mysql.tar</li>
-<li>检查镜像是否已装载<br><br>sudo docker images</li>
-<li>运行镜像<br><br>sudo docker run -p 3306:3306 -v $PWD/mysql:/var/lib/mysql <br><br>-e MYSQL_ROOT_PASSWORD=password –name mysql57 -d mysql:5.7</li>
+        <h2 id="Docker常用命令详解"><a href="#Docker常用命令详解" class="headerlink" title="Docker常用命令详解"></a>Docker常用命令详解</h2><h3 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h3><p>docker pull [选项] [Docker Registry地址]&lt;仓库名&gt;:&lt;标签&gt;<br></p>
+<ul>
+<li><p>Docker Registry地址<br><br>格式：&lt;域名/ip&gt;[:端口号]<br><br>默认为DockerHub地址</p>
+</li>
+<li><p>仓库名<br><br>两段式名称，&lt;用户名&gt;/&lt;软件名&gt;<br><br>若不给出用户名，默认为library，即为官方镜像</p>
+</li>
+<li><p>镜像分层<br><br>镜像是进行分层存储的，下载的是也是一层层下载的，而不是单一文件。<br><br>下载时，会给出每一层ID的前12位。下载结束后，给出镜像完整的sha256的摘要，确保下载的一致性。</p>
+</li>
+</ul>
+<h3 id="运行镜像"><a href="#运行镜像" class="headerlink" title="运行镜像"></a>运行镜像</h3><p>docker run [选项] &lt;仓库名&gt;:&lt;标签&gt;</p>
+<ul>
+<li>示例<br>docker run -it –rm ununtu:14.04 bash<br><br>-i 交互式操作<br><br>-t 终端<br><br>–rm 容器退出后将其删除 <br><br>bash 使用容器的bash执行交互式shell命令</li>
+</ul>
+<h3 id="列出所有镜像"><a href="#列出所有镜像" class="headerlink" title="列出所有镜像"></a>列出所有镜像</h3><p>docker images</p>
+<ul>
+<li><p>列出的信息<br>仓库名 <br><br>标签：一个镜像可以对应多个标签 <br><br>镜像ID：镜像的唯一标识 <br><br>创建时间 <br><br>所占用空间：镜像下载到本地之后，展开后各层所占空间的总和。 <br></p>
+</li>
+<li><p>根据仓库名列出镜像<br>  docker images &lt;仓库名&gt;</p>
+</li>
+<li>列出指定镜像<br>  docker images &lt;仓库名&gt;:&lt;标签&gt;</li>
+<li>过滤参数<br>  如：docker images -f since=mongo:3.2，即列出mongo:3.2之后建立的镜像</li>
 </ul>
 
       
@@ -455,12 +443,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Docker/" rel="tag"><i class="fa fa-tag"></i> Docker</a>
-          
-        </div>
-      
 
       
       
@@ -470,8 +452,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/22/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/09/09/Docker基本概念/" rel="next" title="Docker基本概念">
+                <i class="fa fa-chevron-left"></i> Docker基本概念
               </a>
             
           </div>
@@ -479,10 +461,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/25/git上传本地项目、拉取项目到本地及提交/" rel="prev" title="git上传本地项目、拉取项目到本地及提交">
-                git上传本地项目、拉取项目到本地及提交 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -640,7 +618,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么时候需要拷贝镜像？"><span class="nav-number">1.</span> <span class="nav-text">什么时候需要拷贝镜像？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拷贝镜像的步骤（以Ubuntu系统为例）"><span class="nav-number">2.</span> <span class="nav-text">拷贝镜像的步骤（以Ubuntu系统为例）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker常用命令详解"><span class="nav-number">1.</span> <span class="nav-text">Docker常用命令详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取镜像"><span class="nav-number">1.1.</span> <span class="nav-text">获取镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行镜像"><span class="nav-number">1.2.</span> <span class="nav-text">运行镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出所有镜像"><span class="nav-number">1.3.</span> <span class="nav-text">列出所有镜像</span></a></li></ol></li></ol></div>
             
 
           </div>
