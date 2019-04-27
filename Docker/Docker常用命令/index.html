@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Docker," />
 
 
 
@@ -81,13 +81,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wanggq&#39;s Blog">
-<meta property="og:url" content="https://wanggq.xyz/categories/Git/Git使用/index.html">
+<meta name="description" content="Docker常用命令详解获取镜像docker pull [选项] [Docker Registry地址]&amp;lt;仓库名&amp;gt;:&amp;lt;标签&amp;gt;  Docker Registry地址格式：&amp;lt;域名/ip&amp;gt;[:端口号]默认为DockerHub地址  仓库名两段式名称，&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;若不给出用户名，默认为library，即为官方镜像  镜像分层镜像是进行分">
+<meta name="keywords" content="Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker常用命令">
+<meta property="og:url" content="https://wanggq.xyz/Docker/Docker常用命令/index.html">
 <meta property="og:site_name" content="Wanggq&#39;s Blog">
+<meta property="og:description" content="Docker常用命令详解获取镜像docker pull [选项] [Docker Registry地址]&amp;lt;仓库名&amp;gt;:&amp;lt;标签&amp;gt;  Docker Registry地址格式：&amp;lt;域名/ip&amp;gt;[:端口号]默认为DockerHub地址  仓库名两段式名称，&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;若不给出用户名，默认为library，即为官方镜像  镜像分层镜像是进行分">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-27T12:29:16.422Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wanggq&#39;s Blog">
+<meta name="twitter:title" content="Docker常用命令">
+<meta name="twitter:description" content="Docker常用命令详解获取镜像docker pull [选项] [Docker Registry地址]&amp;lt;仓库名&amp;gt;:&amp;lt;标签&amp;gt;  Docker Registry地址格式：&amp;lt;域名/ip&amp;gt;[:端口号]默认为DockerHub地址  仓库名两段式名称，&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;若不给出用户名，默认为library，即为官方镜像  镜像分层镜像是进行分">
 
 
 
@@ -117,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://wanggq.xyz/categories/Git/Git使用/"/>
+  <link rel="canonical" href="https://wanggq.xyz/Docker/Docker常用命令/"/>
 
 
 
 
 
-<title>分类: Git使用 | Wanggq's Blog</title>
+<title>Docker常用命令 | Wanggq's Blog</title>
 
 
 
@@ -142,7 +147,7 @@
 
 
 
-<div class="container sidebar-position-left ">
+<div class="container sidebar-position-left page-post-detail">
 <div class="headband"></div>
 <a href="https://github.com/leo5592368"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,55 +275,330 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Git使用<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wanggq.xyz/Docker/Docker常用命令/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wanggq">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/blogLogo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wanggq's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/Git/Git使用/git上传本地项目、拉取项目到本地及提交/" itemprop="url">
-              
-                <span itemprop="name">git上传本地项目、拉取项目到本地及提交</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Docker常用命令</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-25T22:44:30+08:00"
-              content="2018-07-25" >
-          07-25
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-10T22:34:53+08:00">
+                2018-09-10
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-27T20:29:16+08:00">
+                2019-04-27
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Docker/" itemprop="url" rel="index">
+                    <span itemprop="name">Docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Docker/Docker常用命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Docker/Docker常用命令/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i> 阅读次数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  419
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Docker常用命令详解"><a href="#Docker常用命令详解" class="headerlink" title="Docker常用命令详解"></a>Docker常用命令详解</h2><h3 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h3><p>docker pull [选项] [Docker Registry地址]&lt;仓库名&gt;:&lt;标签&gt;<br></p>
+<ul>
+<li><p>Docker Registry地址<br><br>格式：&lt;域名/ip&gt;[:端口号]<br><br>默认为DockerHub地址</p>
+</li>
+<li><p>仓库名<br><br>两段式名称，&lt;用户名&gt;/&lt;软件名&gt;<br><br>若不给出用户名，默认为library，即为官方镜像</p>
+</li>
+<li><p>镜像分层<br><br>镜像是进行分层存储的，下载的是也是一层层下载的，而不是单一文件。<br><br>下载时，会给出每一层ID的前12位。下载结束后，给出镜像完整的sha256的摘要，确保下载的一致性。</p>
+</li>
+</ul>
+<h3 id="运行镜像"><a href="#运行镜像" class="headerlink" title="运行镜像"></a>运行镜像</h3><p>docker run [选项] &lt;仓库名&gt;:&lt;标签&gt;<br><br>相当于是新建了一个容器并启动<br></p>
+<ul>
+<li>示例<br>docker run -it –rm ununtu:14.04 bash<br><br>-i 交互式操作<br><br>-t 终端<br><br>–rm 容器退出后将其删除 <br><br>bash 使用容器的bash执行交互式shell命令</li>
+</ul>
+<h3 id="列出所有镜像"><a href="#列出所有镜像" class="headerlink" title="列出所有镜像"></a>列出所有镜像</h3><p>docker images</p>
+<ul>
+<li><p>列出的信息<br>仓库名 <br><br>标签：一个镜像可以对应多个标签 <br><br>镜像ID：镜像的唯一标识 <br><br>创建时间 <br><br>所占用空间：镜像下载到本地之后，展开后各层所占空间的总和。 <br></p>
+</li>
+<li><p>根据仓库名列出镜像<br>  docker images &lt;仓库名&gt;</p>
+</li>
+<li>列出指定镜像<br>  docker images &lt;仓库名&gt;:&lt;标签&gt;</li>
+<li>过滤参数<br>  如：docker images -f since=mongo:3.2，即列出mongo:3.2之后建立的镜像</li>
+</ul>
+<h3 id="容器操作"><a href="#容器操作" class="headerlink" title="容器操作"></a>容器操作</h3><ul>
+<li>启动容器</li>
+<li>新建并启动</li>
+<li>启动已终止的容器</li>
+<li>后台运行容器</li>
+<li>终止容器</li>
+<li>进入容器</li>
+<li>nsenter命令</li>
+<li>导出容器</li>
+<li>导入容器快照</li>
+<li>删除容器</li>
+<li>清理所有处于终止状态的容器</li>
+</ul>
 
       
     </div>
+    
+    
+    
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
+  <p><span>本文标题:</span>Docker常用命令</a></p>
+  <p><span>文章作者:</span>wanggq</a></p>
+  <p><span>发布时间:</span>2018年09月10日 - 22:34:53</p>
+  <p><span>最后更新:</span>2019年04月27日 - 20:29:16</p>
+  <p><span>原始链接:</span><a href="/Docker/Docker常用命令/" title="Docker常用命令">https://wanggq.xyz/Docker/Docker常用命令/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://wanggq.xyz/Docker/Docker常用命令/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+
+          
+    </div>
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    wanggq
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://wanggq.xyz/Docker/Docker常用命令/" title="Docker常用命令">https://wanggq.xyz/Docker/Docker常用命令/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Docker/" rel="tag"><i class="fa fa-tag"></i> Docker</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Docker/Docker基本概念/" rel="next" title="Docker基本概念">
+                <i class="fa fa-chevron-left"></i> Docker基本概念
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Linux/linux概念相关基础/" rel="prev" title="linux概念相关基础">
+                linux概念相关基础 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
-  
-  
-  
+<div>
+    
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
+    
+</div>
 
+    
+</div>
   
+  
+  
+  </article>
 
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -326,6 +606,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -346,8 +633,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -448,6 +744,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker常用命令详解"><span class="nav-number">1.</span> <span class="nav-text">Docker常用命令详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取镜像"><span class="nav-number">1.1.</span> <span class="nav-text">获取镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行镜像"><span class="nav-number">1.2.</span> <span class="nav-text">运行镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出所有镜像"><span class="nav-number">1.3.</span> <span class="nav-text">列出所有镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容器操作"><span class="nav-number">1.4.</span> <span class="nav-text">容器操作</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -604,6 +916,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

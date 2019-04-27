@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Wanggq&#39;s Blog">
 <meta property="og:description" content="什么时候需要拷贝镜像？例如，内部网络无法通过互联网下载镜像，可以在已经安装的机器上将镜像拷贝到内部环境进行安装。 拷贝镜像的步骤（以Ubuntu系统为例） 在源机器上保存镜像到当前目录sudo docker save -o ./mysql.tar mysql:5.7 拷贝tar包到需要装载镜像的机器 执行load命令sudo docker load &amp;lt; mysql.tar 检查镜像是否已装载">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-23T14:57:34.340Z">
+<meta property="og:updated_time" content="2019-04-27T12:31:36.009Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="拷贝Docker镜像">
 <meta name="twitter:description" content="什么时候需要拷贝镜像？例如，内部网络无法通过互联网下载镜像，可以在已经安装的机器上将镜像拷贝到内部环境进行安装。 拷贝镜像的步骤（以Ubuntu系统为例） 在源机器上保存镜像到当前目录sudo docker save -o ./mysql.tar mysql:5.7 拷贝tar包到需要装载镜像的机器 执行load命令sudo docker load &amp;lt; mysql.tar 检查镜像是否已装载">
@@ -284,7 +284,7 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
   
   
   
@@ -334,8 +334,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-23T22:57:34+08:00">
-                2018-07-23
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-27T20:31:36+08:00">
+                2019-04-27
               </time>
             
           </span>
@@ -464,6 +464,38 @@
     <div>
           
             
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>拷贝Docker镜像</a></p>
+  <p><span>文章作者:</span>wanggq</a></p>
+  <p><span>发布时间:</span>2018年07月23日 - 22:17:59</p>
+  <p><span>最后更新:</span>2019年04月27日 - 20:31:36</p>
+  <p><span>原始链接:</span><a href="/Docker/Docker技巧/拷贝Docker镜像/" title="拷贝Docker镜像">https://wanggq.xyz/Docker/Docker技巧/拷贝Docker镜像/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://wanggq.xyz/Docker/Docker技巧/拷贝Docker镜像/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
 
           
     </div>
@@ -507,10 +539,6 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/uncategorized/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
             
           </div>
 
@@ -614,7 +642,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -625,7 +653,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wanggq.xyz/"/>
-  <updated>2018-09-11T14:40:03.371Z</updated>
+  <updated>2019-04-27T12:29:52.324Z</updated>
   <id>https://wanggq.xyz/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>linux概念相关基础</title>
-    <link href="https://wanggq.xyz/uncategorized/linux%E6%A6%82%E5%BF%B5%E7%9B%B8%E5%85%B3%E5%9F%BA%E7%A1%80/"/>
-    <id>https://wanggq.xyz/uncategorized/linux概念相关基础/</id>
+    <link href="https://wanggq.xyz/Linux/linux%E6%A6%82%E5%BF%B5%E7%9B%B8%E5%85%B3%E5%9F%BA%E7%A1%80/"/>
+    <id>https://wanggq.xyz/Linux/linux概念相关基础/</id>
     <published>2018-09-11T14:09:32.000Z</published>
-    <updated>2018-09-11T14:40:03.371Z</updated>
+    <updated>2019-04-27T12:29:52.324Z</updated>
     
     <summary type="html">
     
@@ -32,6 +32,8 @@
     
     </summary>
     
+      <category term="Linux" scheme="https://wanggq.xyz/categories/Linux/"/>
+    
     
       <category term="Linux" scheme="https://wanggq.xyz/tags/Linux/"/>
     
@@ -39,10 +41,10 @@
   
   <entry>
     <title>Docker常用命令</title>
-    <link href="https://wanggq.xyz/uncategorized/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>https://wanggq.xyz/uncategorized/Docker常用命令/</id>
+    <link href="https://wanggq.xyz/Docker/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://wanggq.xyz/Docker/Docker常用命令/</id>
     <published>2018-09-10T14:34:53.000Z</published>
-    <updated>2018-09-11T14:55:24.993Z</updated>
+    <updated>2019-04-27T12:29:16.422Z</updated>
     
     <summary type="html">
     
@@ -53,15 +55,19 @@
     
     </summary>
     
+      <category term="Docker" scheme="https://wanggq.xyz/categories/Docker/"/>
+    
+    
+      <category term="Docker" scheme="https://wanggq.xyz/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>Docker基本概念</title>
-    <link href="https://wanggq.xyz/uncategorized/Docker%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
-    <id>https://wanggq.xyz/uncategorized/Docker基本概念/</id>
+    <link href="https://wanggq.xyz/Docker/Docker%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+    <id>https://wanggq.xyz/Docker/Docker基本概念/</id>
     <published>2018-09-09T14:40:54.000Z</published>
-    <updated>2018-09-09T14:50:18.198Z</updated>
+    <updated>2019-04-27T12:28:58.511Z</updated>
     
     <summary type="html">
     
@@ -72,6 +78,8 @@
     
     </summary>
     
+      <category term="Docker" scheme="https://wanggq.xyz/categories/Docker/"/>
+    
     
       <category term="Docker" scheme="https://wanggq.xyz/tags/Docker/"/>
     
@@ -79,10 +87,10 @@
   
   <entry>
     <title>CentOS7 安装docker</title>
-    <link href="https://wanggq.xyz/uncategorized/CentOS7-%E5%AE%89%E8%A3%85docker/"/>
-    <id>https://wanggq.xyz/uncategorized/CentOS7-安装docker/</id>
+    <link href="https://wanggq.xyz/Docker/CentOS7-%E5%AE%89%E8%A3%85docker/"/>
+    <id>https://wanggq.xyz/Docker/CentOS7-安装docker/</id>
     <published>2018-09-09T14:26:28.000Z</published>
-    <updated>2018-09-10T15:13:04.405Z</updated>
+    <updated>2019-04-27T12:28:33.271Z</updated>
     
     <summary type="html">
     
@@ -94,6 +102,8 @@
     
     </summary>
     
+      <category term="Docker" scheme="https://wanggq.xyz/categories/Docker/"/>
+    
     
       <category term="Docker" scheme="https://wanggq.xyz/tags/Docker/"/>
     
@@ -104,7 +114,7 @@
     <link href="https://wanggq.xyz/Git/Git%E4%BD%BF%E7%94%A8/git%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E3%80%81%E6%8B%89%E5%8F%96%E9%A1%B9%E7%9B%AE%E5%88%B0%E6%9C%AC%E5%9C%B0%E5%8F%8A%E6%8F%90%E4%BA%A4/"/>
     <id>https://wanggq.xyz/Git/Git使用/git上传本地项目、拉取项目到本地及提交/</id>
     <published>2018-07-25T14:44:30.000Z</published>
-    <updated>2018-07-25T16:35:03.787Z</updated>
+    <updated>2019-04-27T12:31:18.477Z</updated>
     
     <summary type="html">
     
@@ -130,7 +140,7 @@
     <link href="https://wanggq.xyz/Docker/Docker%E6%8A%80%E5%B7%A7/%E6%8B%B7%E8%B4%9DDocker%E9%95%9C%E5%83%8F/"/>
     <id>https://wanggq.xyz/Docker/Docker技巧/拷贝Docker镜像/</id>
     <published>2018-07-23T14:17:59.000Z</published>
-    <updated>2018-07-23T14:57:34.340Z</updated>
+    <updated>2019-04-27T12:31:36.009Z</updated>
     
     <summary type="html">
     
@@ -147,25 +157,6 @@
     
     
       <category term="Docker" scheme="https://wanggq.xyz/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://wanggq.xyz/uncategorized/hello-world/"/>
-    <id>https://wanggq.xyz/uncategorized/hello-world/</id>
-    <published>2018-07-21T16:13:57.983Z</published>
-    <updated>2018-07-21T16:13:57.984Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
     
   </entry>
   
