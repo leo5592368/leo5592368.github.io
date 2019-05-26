@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Git," />
+  <meta name="keywords" content="设计模式," />
 
 
 
@@ -81,18 +81,20 @@
 
 
 
-<meta name="description" content="上传本地项目到git仓库 第一步：初始化本地项目目录cd到本地项目的根目录，执行git init，此时会在当前目录生成.git文件  第二步：将项目文件添加到待上传列表执行命令git add .这个命令会把当前路径下的所有文件，添加到待上传的文件列表中。 如果想添加某个特定的文件，只需把.换成特定的文件名即可。  第三步：将add的文件commit到仓库执行命令git commit -m &amp;quo">
-<meta name="keywords" content="Git">
+<meta name="description" content="代理模式为其他对象提供一种代理以控制对这个对象的访问 UML类图  代理模式三剑客：共同接口、真实对象、代理对象 代理模式分为静态代理和动态代理：  静态代理 在编译期实现代理对象  动态代理 在运行时生成代理对象   代理的作用 远程代理 为一个对象在不同的地址空间提供局部代表，以隐藏一个对象存在于不同地址空间的事实。  虚拟代理 根据需要创建开销很大的对象，通过它来存放实例化需要很长时间的真实">
+<meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git上传本地项目、拉取项目到本地及提交">
-<meta property="og:url" content="https://wanggq.xyz/Git/Git使用/git上传本地项目、拉取项目到本地及提交/index.html">
+<meta property="og:title" content="从零单排设计模式——代理模式">
+<meta property="og:url" content="https://wanggq.xyz/从零单排设计模式/从零单排设计模式——代理模式/index.html">
 <meta property="og:site_name" content="Wanggq&#39;s Blog">
-<meta property="og:description" content="上传本地项目到git仓库 第一步：初始化本地项目目录cd到本地项目的根目录，执行git init，此时会在当前目录生成.git文件  第二步：将项目文件添加到待上传列表执行命令git add .这个命令会把当前路径下的所有文件，添加到待上传的文件列表中。 如果想添加某个特定的文件，只需把.换成特定的文件名即可。  第三步：将add的文件commit到仓库执行命令git commit -m &amp;quo">
+<meta property="og:description" content="代理模式为其他对象提供一种代理以控制对这个对象的访问 UML类图  代理模式三剑客：共同接口、真实对象、代理对象 代理模式分为静态代理和动态代理：  静态代理 在编译期实现代理对象  动态代理 在运行时生成代理对象   代理的作用 远程代理 为一个对象在不同的地址空间提供局部代表，以隐藏一个对象存在于不同地址空间的事实。  虚拟代理 根据需要创建开销很大的对象，通过它来存放实例化需要很长时间的真实">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-27T12:31:18.477Z">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79ly1g3etfxuey0j30bu08ygmo.jpg">
+<meta property="og:updated_time" content="2019-05-26T08:52:26.234Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git上传本地项目、拉取项目到本地及提交">
-<meta name="twitter:description" content="上传本地项目到git仓库 第一步：初始化本地项目目录cd到本地项目的根目录，执行git init，此时会在当前目录生成.git文件  第二步：将项目文件添加到待上传列表执行命令git add .这个命令会把当前路径下的所有文件，添加到待上传的文件列表中。 如果想添加某个特定的文件，只需把.换成特定的文件名即可。  第三步：将add的文件commit到仓库执行命令git commit -m &amp;quo">
+<meta name="twitter:title" content="从零单排设计模式——代理模式">
+<meta name="twitter:description" content="代理模式为其他对象提供一种代理以控制对这个对象的访问 UML类图  代理模式三剑客：共同接口、真实对象、代理对象 代理模式分为静态代理和动态代理：  静态代理 在编译期实现代理对象  动态代理 在运行时生成代理对象   代理的作用 远程代理 为一个对象在不同的地址空间提供局部代表，以隐藏一个对象存在于不同地址空间的事实。  虚拟代理 根据需要创建开销很大的对象，通过它来存放实例化需要很长时间的真实">
+<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/006tNc79ly1g3etfxuey0j30bu08ygmo.jpg">
 
 
 
@@ -122,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://wanggq.xyz/Git/Git使用/git上传本地项目、拉取项目到本地及提交/"/>
+  <link rel="canonical" href="https://wanggq.xyz/从零单排设计模式/从零单排设计模式——代理模式/"/>
 
 
 
 
 
-<title>git上传本地项目、拉取项目到本地及提交 | Wanggq's Blog</title>
+<title>从零单排设计模式——代理模式 | Wanggq's Blog</title>
 
 
 
@@ -289,7 +291,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wanggq.xyz/Git/Git使用/git上传本地项目、拉取项目到本地及提交/">
+    <link itemprop="mainEntityOfPage" href="https://wanggq.xyz/从零单排设计模式/从零单排设计模式——代理模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wanggq">
@@ -306,7 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git上传本地项目、拉取项目到本地及提交</h1>
+          <h1 class="post-title" itemprop="name headline">从零单排设计模式——代理模式</h1>
         
 
         <div class="post-meta">
@@ -318,8 +320,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-25T22:44:30+08:00">
-                2018-07-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-26T16:51:17+08:00">
+                2019-05-26
               </time>
             
 
@@ -334,8 +336,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-27T20:31:18+08:00">
-                2019-04-27
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-26T16:52:26+08:00">
+                2019-05-26
               </time>
             
           </span>
@@ -353,19 +355,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/Git使用/" itemprop="url" rel="index">
-                    <span itemprop="name">Git使用</span>
+                  <a href="/categories/从零单排设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">从零单排设计模式</span>
                   </a>
                 </span>
 
@@ -382,8 +373,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Git/Git使用/git上传本地项目、拉取项目到本地及提交/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Git/Git使用/git上传本地项目、拉取项目到本地及提交/" itemprop="commentCount"></span>
+                <a href="/从零单排设计模式/从零单排设计模式——代理模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/从零单排设计模式/从零单排设计模式——代理模式/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -410,7 +401,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  408
+                  719
                 </span>
               
 
@@ -426,7 +417,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -447,33 +438,44 @@
       
 
       
-        <h3 id="上传本地项目到git仓库"><a href="#上传本地项目到git仓库" class="headerlink" title="上传本地项目到git仓库"></a>上传本地项目到git仓库</h3><ul>
-<li><p>第一步：初始化本地项目目录<br><br>cd到本地项目的根目录，执行<code>git init</code>，此时会在当前目录生成.git文件</p>
+        <h1 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h1><p>为其他对象提供一种代理以控制对这个对象的访问</p>
+<p><strong>UML类图</strong></p>
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79ly1g3etfxuey0j30bu08ygmo.jpg" alt=""></p>
+<p>代理模式三剑客：共同接口、真实对象、代理对象</p>
+<p>代理模式分为静态代理和动态代理：</p>
+<ul>
+<li><p>静态代理</p>
+<p>在编译期实现代理对象</p>
 </li>
-<li><p>第二步：将项目文件添加到待上传列表<br><br>执行命令<code>git add .</code>这个命令会把当前路径下的所有文件，添加到待上传的文件列表中。 如果想添加某个特定的文件，只需把.换成特定的文件名即可。</p>
-</li>
-<li><p>第三步：将add的文件commit到仓库<br><br>执行命令<code>git commit -m &quot;注释语句&quot;</code></p>
-</li>
-<li><p>第四步：将本地的仓库关联到github<br><br>执行命令<code>git remote add origin https://仓库url</code></p>
-</li>
-<li><p>第五步：上传代码到github远程仓库<br>执行命令<code>git push -u origin master</code>，执行时会提示输入账号和密码<br>若执行时时出现错误[rejected] master -&gt; master (non-fast-forward)，则先执行语句<code>git pull</code>，在执行<code>git push --force origin master</code>即可解决。</p>
-</li>
-</ul>
-<h3 id="拉取git项目到本地"><a href="#拉取git项目到本地" class="headerlink" title="拉取git项目到本地"></a>拉取git项目到本地</h3><ul>
-<li><p>第一步： cd 到需要存放项目的目录<br><br>执行命令<code>cd 目录</code></p>
-</li>
-<li><p>第二步： 克隆项目<br><br>执行命令<code>git clone url</code></p>
+<li><p>动态代理</p>
+<p>在运行时生成代理对象</p>
 </li>
 </ul>
-<h3 id="改动后提交项目到github"><a href="#改动后提交项目到github" class="headerlink" title="改动后提交项目到github"></a>改动后提交项目到github</h3><ul>
-<li><p>第一步：<code>git add 修改后的文件</code>，若全部提交，则执行<code>git add .</code></p>
+<h2 id="代理的作用"><a href="#代理的作用" class="headerlink" title="代理的作用"></a>代理的作用</h2><ul>
+<li><p>远程代理</p>
+<p>为一个对象在不同的地址空间提供局部代表，以隐藏一个对象存在于不同地址空间的事实。</p>
 </li>
-<li><p>第二步：执行<code>git commit -m &quot;注释&quot;</code></p>
+<li><p>虚拟代理</p>
+<p>根据需要创建开销很大的对象，通过它来存放实例化需要很长时间的真实对象。</p>
 </li>
-<li>第三步：执行<code>git push origin master</code></li>
+<li><p>安全代理</p>
+<p>用来控制真实对象访问时的权限。</p>
+</li>
+<li><p>智能指引</p>
+<p>当调用真实的对象时，代理处理另外一些事。</p>
+</li>
 </ul>
-<h3 id="修改上传的用户名和密码"><a href="#修改上传的用户名和密码" class="headerlink" title="修改上传的用户名和密码"></a>修改上传的用户名和密码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot;</span><br><span class="line">git config --global user.email you@example.com</span><br></pre></td></tr></table></figure>
-<p>或者通过更改配置文件的方式进行修改<br>全局的通过vim ~/.gitconfig来修改<br>局部的通过当前路径下的 .git/config文件来修改</p>
+<h2 id="如何实现代理"><a href="#如何实现代理" class="headerlink" title="如何实现代理"></a>如何实现代理</h2><p>在接口<code>IHelloWorld`</code>中有方法sayHello()<code>，</code>HelloWorldImpl`实现了该接口，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IHelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorldImpl</span> <span class="keyword">implements</span> <span class="title">IHelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过代理的方式在调用sayHello方法之前输出beffore sayHello，在调用方法结束后输出after sayHello。</p>
+<h3 id="静态代理"><a href="#静态代理" class="headerlink" title="静态代理"></a>静态代理</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.leo.proxy.HelloWorldImpl;</span><br><span class="line"><span class="keyword">import</span> com.leo.proxy.IHelloWorld;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorldProxy</span> <span class="keyword">implements</span> <span class="title">IHelloWorld</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> IHelloWorld helloWorld;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HelloWorldProxy</span><span class="params">(IHelloWorld helloWorld)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.helloWorld = helloWorld;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"before sayHello"</span>);</span><br><span class="line">        helloWorld.sayHello();</span><br><span class="line">        System.out.println(<span class="string">"after sayHello"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        HelloWorldProxy proxy = <span class="keyword">new</span> HelloWorldProxy(<span class="keyword">new</span> HelloWorldImpl());</span><br><span class="line">        proxy.sayHello();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h3><h4 id="Jdk动态代理"><a href="#Jdk动态代理" class="headerlink" title="Jdk动态代理"></a>Jdk动态代理</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.leo.proxy.HelloWorldImpl;</span><br><span class="line"><span class="keyword">import</span> com.leo.proxy.IHelloWorld;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationHandler;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Proxy;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JdkDynamicProxy</span> <span class="keyword">implements</span> <span class="title">InvocationHandler</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Object target;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">JdkDynamicProxy</span><span class="params">(Object target)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.target = target;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> &lt;T&gt; <span class="function">T <span class="title">getProxy</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (T) Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), <span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"besfore sayHello"</span>);</span><br><span class="line">        Object result = method.invoke(target, args);</span><br><span class="line">        System.out.println(<span class="string">"after sayHello"</span>);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        IHelloWorld helloWorld = <span class="keyword">new</span> JdkDynamicProxy(<span class="keyword">new</span> HelloWorldImpl()).getProxy();</span><br><span class="line">        helloWorld.sayHello();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="cglib动态代理"><a href="#cglib动态代理" class="headerlink" title="cglib动态代理"></a>cglib动态代理</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.leo.proxy.HelloWorldImpl;</span><br><span class="line"><span class="keyword">import</span> com.leo.proxy.IHelloWorld;</span><br><span class="line"><span class="keyword">import</span> net.sf.cglib.proxy.Enhancer;</span><br><span class="line"><span class="keyword">import</span> net.sf.cglib.proxy.MethodInterceptor;</span><br><span class="line"><span class="keyword">import</span> net.sf.cglib.proxy.MethodProxy;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CglibDynamicProxy</span> <span class="keyword">implements</span> <span class="title">MethodInterceptor</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">intercept</span><span class="params">(Object o, Method method, Object[] objects, MethodProxy methodProxy)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"before sayHello"</span>);</span><br><span class="line">        Object result = methodProxy.invokeSuper(o, objects);</span><br><span class="line">        System.out.println(<span class="string">"after sayHello"</span>);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Enhancer enhancer = <span class="keyword">new</span> Enhancer();</span><br><span class="line">        enhancer.setSuperclass(HelloWorldImpl.class);</span><br><span class="line">        enhancer.setCallback(<span class="keyword">new</span> CglibDynamicProxy());</span><br><span class="line"></span><br><span class="line">        IHelloWorld proxy = (IHelloWorld)enhancer.create();</span><br><span class="line">        proxy.sayHello();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="使用Apache的commons-proxy包实现"><a href="#使用Apache的commons-proxy包实现" class="headerlink" title="使用Apache的commons-proxy包实现"></a>使用Apache的commons-proxy包实现</h4><h4 id="Jdk动态代理与Cglib代理的区别"><a href="#Jdk动态代理与Cglib代理的区别" class="headerlink" title="Jdk动态代理与Cglib代理的区别"></a>Jdk动态代理与Cglib代理的区别</h4><ul>
+<li>动态代理只能够对接口进行代理，不能对普通的类进行代理（因为所有生成的代理类的父类为Proxy，Java类继承机制不允许多重继承）；CGLIB能够代理普通类。</li>
+<li>Java动态代理使用Java原生的反射API进行操作，在生成类上比较高效；CGLIB使用ASM框架直接对字节码进行操作，在类的执行过程中比较高效。</li>
+</ul>
 
       
     </div>
@@ -491,12 +493,12 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>git上传本地项目、拉取项目到本地及提交</a></p>
+  <p><span>本文标题:</span>从零单排设计模式——代理模式</a></p>
   <p><span>文章作者:</span>wanggq</a></p>
-  <p><span>发布时间:</span>2018年07月25日 - 22:44:30</p>
-  <p><span>最后更新:</span>2019年04月27日 - 20:31:18</p>
-  <p><span>原始链接:</span><a href="/Git/Git使用/git上传本地项目、拉取项目到本地及提交/" title="git上传本地项目、拉取项目到本地及提交">https://wanggq.xyz/Git/Git使用/git上传本地项目、拉取项目到本地及提交/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://wanggq.xyz/Git/Git使用/git上传本地项目、拉取项目到本地及提交/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年05月26日 - 16:51:17</p>
+  <p><span>最后更新:</span>2019年05月26日 - 16:52:26</p>
+  <p><span>原始链接:</span><a href="/从零单排设计模式/从零单排设计模式——代理模式/" title="从零单排设计模式——代理模式">https://wanggq.xyz/从零单排设计模式/从零单排设计模式——代理模式/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://wanggq.xyz/从零单排设计模式/从零单排设计模式——代理模式/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -560,7 +562,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://wanggq.xyz/Git/Git使用/git上传本地项目、拉取项目到本地及提交/" title="git上传本地项目、拉取项目到本地及提交">https://wanggq.xyz/Git/Git使用/git上传本地项目、拉取项目到本地及提交/</a>
+    <a href="https://wanggq.xyz/从零单排设计模式/从零单排设计模式——代理模式/" title="从零单排设计模式——代理模式">https://wanggq.xyz/从零单排设计模式/从零单排设计模式——代理模式/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -575,7 +577,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+            <a href="/tags/设计模式/" rel="tag"><i class="fa fa-tag"></i> 设计模式</a>
           
         </div>
       
@@ -588,8 +590,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Docker/Docker技巧/拷贝Docker镜像/" rel="next" title="拷贝Docker镜像">
-                <i class="fa fa-chevron-left"></i> 拷贝Docker镜像
+              <a href="/从零单排学Java/Java基础/从零单排学Java——Java数据类型/" rel="next" title="从零单排学Java——Java数据类型">
+                <i class="fa fa-chevron-left"></i> 从零单排学Java——Java数据类型
               </a>
             
           </div>
@@ -597,10 +599,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Docker/CentOS7-安装docker/" rel="prev" title="CentOS7 安装docker">
-                CentOS7 安装docker <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -788,7 +786,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#上传本地项目到git仓库"><span class="nav-number">1.</span> <span class="nav-text">上传本地项目到git仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拉取git项目到本地"><span class="nav-number">2.</span> <span class="nav-text">拉取git项目到本地</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改动后提交项目到github"><span class="nav-number">3.</span> <span class="nav-text">改动后提交项目到github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改上传的用户名和密码"><span class="nav-number">4.</span> <span class="nav-text">修改上传的用户名和密码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#代理模式"><span class="nav-number">1.</span> <span class="nav-text">代理模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#代理的作用"><span class="nav-number">1.1.</span> <span class="nav-text">代理的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何实现代理"><span class="nav-number">1.2.</span> <span class="nav-text">如何实现代理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态代理"><span class="nav-number">1.2.1.</span> <span class="nav-text">静态代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态代理"><span class="nav-number">1.2.2.</span> <span class="nav-text">动态代理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Jdk动态代理"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">Jdk动态代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cglib动态代理"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">cglib动态代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用Apache的commons-proxy包实现"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">使用Apache的commons-proxy包实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Jdk动态代理与Cglib代理的区别"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">Jdk动态代理与Cglib代理的区别</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

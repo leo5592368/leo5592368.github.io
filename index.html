@@ -285,6 +285,584 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wanggq.xyz/从零单排设计模式/从零单排设计模式——代理模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wanggq">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/blogLogo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wanggq's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/从零单排设计模式/从零单排设计模式——代理模式/" itemprop="url">从零单排设计模式——代理模式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-26T16:51:17+08:00">
+                2019-05-26
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-26T16:52:26+08:00">
+                2019-05-26
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/从零单排设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">从零单排设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/从零单排设计模式/从零单排设计模式——代理模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/从零单排设计模式/从零单排设计模式——代理模式/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  719
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h1><p>为其他对象提供一种代理以控制对这个对象的访问</p>
+<p><strong>UML类图</strong></p>
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79ly1g3etfxuey0j30bu08ygmo.jpg" alt=""></p>
+<p>代理模式三剑客：共同接口、真实对象、代理对象</p>
+<p>代理模式分为静态代理和动态代理：</p>
+<ul>
+<li><p>静态代理</p>
+<p>在编译期实现代理对象</p>
+</li>
+<li><p>动态代理</p>
+<p>在运行时生成代理对象</p>
+</li>
+</ul>
+<h2 id="代理的作用"><a href="#代理的作用" class="headerlink" title="代理的作用"></a>代理的作用</h2><ul>
+<li><p>远程代理</p>
+<p>为一个对象在不同的地址空间提供局部代表，以隐藏一个对象存在于不同地址空间的事实。</p>
+</li>
+<li><p>虚拟代理</p>
+<p>根据需要创建开销很大的对象，通过它来存放实例化需要很长时间的真实对象。</p>
+</li>
+<li><p>安全代理</p>
+<p>用来控制真实对象访问时的权限。</p>
+</li>
+<li><p>智能指引</p>
+<p>当调用真实的对象时，代理处理另外一些事。</p>
+</li>
+</ul>
+<h2 id="如何实现代理"><a href="#如何实现代理" class="headerlink" title="如何实现代理"></a>如何实现代理</h2><p>在接口<code>IHelloWorld`</code>中有方法sayHello()<code>，</code>HelloWorldImpl`实现了该接口，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IHelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorldImpl</span> <span class="keyword">implements</span> <span class="title">IHelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过代理的方式在调用sayHello方法之前输出beffore sayHello，在调用方法结束后输出after sayHello。</p>
+<h3 id="静态代理"><a href="#静态代理" class="headerlink" title="静态代理"></a>静态代理</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.leo.proxy.HelloWorldImpl;</span><br><span class="line"><span class="keyword">import</span> com.leo.proxy.IHelloWorld;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorldProxy</span> <span class="keyword">implements</span> <span class="title">IHelloWorld</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> IHelloWorld helloWorld;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HelloWorldProxy</span><span class="params">(IHelloWorld helloWorld)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.helloWorld = helloWorld;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"before sayHello"</span>);</span><br><span class="line">        helloWorld.sayHello();</span><br><span class="line">        System.out.println(<span class="string">"after sayHello"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        HelloWorldProxy proxy = <span class="keyword">new</span> HelloWorldProxy(<span class="keyword">new</span> HelloWorldImpl());</span><br><span class="line">        proxy.sayHello();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h3><h4 id="Jdk动态代理"><a href="#Jdk动态代理" class="headerlink" title="Jdk动态代理"></a>Jdk动态代理</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.leo.proxy.HelloWorldImpl;</span><br><span class="line"><span class="keyword">import</span> com.leo.proxy.IHelloWorld;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationHandler;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Proxy;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JdkDynamicProxy</span> <span class="keyword">implements</span> <span class="title">InvocationHandler</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Object target;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">JdkDynamicProxy</span><span class="params">(Object target)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.target = target;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> &lt;T&gt; <span class="function">T <span class="title">getProxy</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (T) Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), <span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"besfore sayHello"</span>);</span><br><span class="line">        Object result = method.invoke(target, args);</span><br><span class="line">        System.out.println(<span class="string">"after sayHello"</span>);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        IHelloWorld helloWorld = <span class="keyword">new</span> JdkDynamicProxy(<span class="keyword">new</span> HelloWorldImpl()).getProxy();</span><br><span class="line">        helloWorld.sayHello();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="cglib动态代理"><a href="#cglib动态代理" class="headerlink" title="cglib动态代理"></a>cglib动态代理</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.leo.proxy.HelloWorldImpl;</span><br><span class="line"><span class="keyword">import</span> com.leo.proxy.IHelloWorld;</span><br><span class="line"><span class="keyword">import</span> net.sf.cglib.proxy.Enhancer;</span><br><span class="line"><span class="keyword">import</span> net.sf.cglib.proxy.MethodInterceptor;</span><br><span class="line"><span class="keyword">import</span> net.sf.cglib.proxy.MethodProxy;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CglibDynamicProxy</span> <span class="keyword">implements</span> <span class="title">MethodInterceptor</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">intercept</span><span class="params">(Object o, Method method, Object[] objects, MethodProxy methodProxy)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"before sayHello"</span>);</span><br><span class="line">        Object result = methodProxy.invokeSuper(o, objects);</span><br><span class="line">        System.out.println(<span class="string">"after sayHello"</span>);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Enhancer enhancer = <span class="keyword">new</span> Enhancer();</span><br><span class="line">        enhancer.setSuperclass(HelloWorldImpl.class);</span><br><span class="line">        enhancer.setCallback(<span class="keyword">new</span> CglibDynamicProxy());</span><br><span class="line"></span><br><span class="line">        IHelloWorld proxy = (IHelloWorld)enhancer.create();</span><br><span class="line">        proxy.sayHello();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="使用Apache的commons-proxy包实现"><a href="#使用Apache的commons-proxy包实现" class="headerlink" title="使用Apache的commons-proxy包实现"></a>使用Apache的commons-proxy包实现</h4><h4 id="Jdk动态代理与Cglib代理的区别"><a href="#Jdk动态代理与Cglib代理的区别" class="headerlink" title="Jdk动态代理与Cglib代理的区别"></a>Jdk动态代理与Cglib代理的区别</h4><ul>
+<li>动态代理只能够对接口进行代理，不能对普通的类进行代理（因为所有生成的代理类的父类为Proxy，Java类继承机制不允许多重继承）；CGLIB能够代理普通类。</li>
+<li>Java动态代理使用Java原生的反射API进行操作，在生成类上比较高效；CGLIB使用ASM框架直接对字节码进行操作，在类的执行过程中比较高效。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+          
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+<div>
+    
+</div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wanggq.xyz/从零单排学Java/Java基础/从零单排学Java——Java数据类型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wanggq">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/blogLogo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wanggq's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/从零单排学Java/Java基础/从零单排学Java——Java数据类型/" itemprop="url">从零单排学Java——Java数据类型</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-26T16:44:45+08:00">
+                2019-05-26
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-26T16:57:19+08:00">
+                2019-05-26
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/从零单排学Java/" itemprop="url" rel="index">
+                    <span itemprop="name">从零单排学Java</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/从零单排学Java/Java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/从零单排学Java/Java基础/从零单排学Java——Java数据类型/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/从零单排学Java/Java基础/从零单排学Java——Java数据类型/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>Java中的数据类型分为基础数据类型和引用数据类型。</p>
+<h2 id="基础数据类型"><a href="#基础数据类型" class="headerlink" title="基础数据类型"></a>基础数据类型</h2><h3 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h3><ul>
+<li><p>byte</p>
+<p>8位，用于表示最小的数据单位，-128~127</p>
+</li>
+<li><p>short</p>
+<p>16位，一般很少用，-32768~32767</p>
+</li>
+<li><p>int</p>
+<p>32位，最常用，-2<sup>31</sup>~2<sup>31</sup></p>
+<p><code>int i = 2</code>，2叫字面量(直接量)，即直接写出的常数，整数的字面量默认都是int类型。</p>
+<p>Java7开始，int类型可以使用下划线，方便编码人员阅读，如：<code>int a = 1_000</code></p>
+</li>
+<li><p>long</p>
+<p>64位，次常用，在定义long型数据时，在后面加上L或l。</p>
+</li>
+</ul>
+<h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><p>浮点数，顾名思义是浮动的数，即是不精确的数，不能对浮点数进行精确比较。在计算过程中也会损失精度，因此切勿使用在需要明确数字精度的场景，如表示金额等。</p>
+<ul>
+<li><p>float</p>
+<p>32位，定义时，在后面加上F或者f。</p>
+</li>
+<li><p>double</p>
+<p>64位，是浮点型的默认字面量类型，定义时无需加后缀。</p>
+</li>
+</ul>
+<h3 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h3><p>尽量不要使用，容易产生隐藏的错误。</p>
+<ul>
+<li><p>char</p>
+<p>16位，单引号表示(可以是中文字符，Unicode编码)，实际是整数类型，经过处理显示为字符，0~2<sup>16</sup>-1</p>
+</li>
+</ul>
+<h3 id="布尔型"><a href="#布尔型" class="headerlink" title="布尔型"></a>布尔型</h3><ul>
+<li><p>boolean</p>
+<p>表示真（true）假（false）</p>
+</li>
+</ul>
+<h2 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h2><p>引用数据类型的存储空间氛围两部分，一个在stack(栈)中，一个在heap(堆)中。一般stack中存放head的地址，heap中存放实际的数据。</p>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>Java8开始，接口中的方法可以有默认实现。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IHelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">sayBye</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Bye"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><ul>
+<li>变量名指向具体的值</li>
+<li>声明后，立刻分配给它内存空间</li>
+<li>分配在栈上</li>
+<li>使用==比较相等</li>
+</ul>
+<h3 id="引用数据类型-1"><a href="#引用数据类型-1" class="headerlink" title="引用数据类型"></a>引用数据类型</h3><ul>
+<li>变量名指向存储对象的内存地址</li>
+<li>声明后，分配的是内存地址，不会分配内存</li>
+<li>实际数据分配在堆上</li>
+<li>通常使用equals方法进行比较。如果使用==，仅仅是比较两个对象是否指向同一个内存地址。</li>
+</ul>
+<h2 id="包装类型"><a href="#包装类型" class="headerlink" title="包装类型"></a>包装类型</h2><h3 id="基本类型出现的原因"><a href="#基本类型出现的原因" class="headerlink" title="基本类型出现的原因"></a>基本类型出现的原因</h3><p>引用《Thinking In Java》中的相关描述。万物皆对象，new一个对象存储在堆中，我们通过堆栈的引用来使用这些对象，但是对于经常用到的一系列类型如int，如果我们用new将其存储在堆里就不是很有效——特别是简单的小的变量。所以就出现了基本类型，同C++一样，Java采用了相似的做法，对于这些类型不是用new关键字来创建，而是直接将变量的值存储在堆栈中，因此更加高效。</p>
+<h3 id="包装类型出现的原因"><a href="#包装类型出现的原因" class="headerlink" title="包装类型出现的原因"></a>包装类型出现的原因</h3><p>Java是一个面向对象的语言，基本类型并不具有对象的性质，为了与其他对象“接轨”就出现了包装类型（如我们在使用集合类型Collection时就一定要使用包装类型而非基本类型），它相当于将基本类型“包装起来”，使得它具有了对象的性质，并且为其添加了属性和方法，丰富了基本类型的操作。</p>
+<h3 id="基本类型的包装类型"><a href="#基本类型的包装类型" class="headerlink" title="基本类型的包装类型"></a>基本类型的包装类型</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">基本类型</th>
+<th style="text-align:center">二进制位数</th>
+<th style="text-align:center">包装类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">boolean</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Boolean</td>
+</tr>
+<tr>
+<td style="text-align:center">byte</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">Byte</td>
+</tr>
+<tr>
+<td style="text-align:center">char</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">Char</td>
+</tr>
+<tr>
+<td style="text-align:center">short</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">Short</td>
+</tr>
+<tr>
+<td style="text-align:center">int</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">Integer</td>
+</tr>
+<tr>
+<td style="text-align:center">long</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">Long</td>
+</tr>
+<tr>
+<td style="text-align:center">float</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">Float</td>
+</tr>
+<tr>
+<td style="text-align:center">double</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">Double</td>
+</tr>
+</tbody>
+</table>
+<h2 id="类型装换"><a href="#类型装换" class="headerlink" title="类型装换"></a>类型装换</h2><p>类型转换主要在赋值、方法调用、算术运算三种情况下发生。</p>
+<h3 id="基本类型转换原则"><a href="#基本类型转换原则" class="headerlink" title="基本类型转换原则"></a>基本类型转换原则</h3><ul>
+<li><p>赋值和方法调用</p>
+<ul>
+<li><p>从低位到高位，自动类型转换</p>
+<p>布尔类型和其它基本数据类型之间不能相互转换</p>
+<p>转换从低到高：</p>
+<p><code>byte,short,char—&gt; int —&gt; long—&gt; float —&gt; double</code></p>
+</li>
+<li><p>从高位到低位，强制类型转换，会损失精度</p>
+</li>
+</ul>
+</li>
+<li><p>算术运算</p>
+<p>整体原则：不同类型之间的计算，先转换为高位数据类型，再参加运算，结果也是高位的数据类型。</p>
+</li>
+</ul>
+<h3 id="引用类型转换原则"><a href="#引用类型转换原则" class="headerlink" title="引用类型转换原则"></a>引用类型转换原则</h3><ul>
+<li><p>基本类型与对应的包装类型，自动转换</p>
+</li>
+<li><p>子类能直接转换为父类或者接口类型</p>
+</li>
+<li><p>父类转换为子类，强制类型转换</p>
+<p>运行时，若实际不是对应的对象，会抛出ClassCastException运行时异常。</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+          
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+<div>
+    
+</div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://wanggq.xyz/Linux/linux概念相关基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1654,7 +2232,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1665,7 +2243,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1676,7 +2254,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
